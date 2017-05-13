@@ -1,7 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialRobotics.Plugins", "SocialRobotics.Plugins.csproj", "{D431A9F7-E703-8434-D40C-FC28113EF8B3}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialRobotics", "SocialRobotics.csproj", "{66BEC259-4BF8-3368-58AC-7147E2C5406C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialRobotics.Editor.Plugins", "SocialRobotics.Editor.Plugins.csproj", "{CAF4164A-BA20-D199-AA69-FB23409CCF91}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +13,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D431A9F7-E703-8434-D40C-FC28113EF8B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D431A9F7-E703-8434-D40C-FC28113EF8B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D431A9F7-E703-8434-D40C-FC28113EF8B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D431A9F7-E703-8434-D40C-FC28113EF8B3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{66BEC259-4BF8-3368-58AC-7147E2C5406C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{66BEC259-4BF8-3368-58AC-7147E2C5406C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66BEC259-4BF8-3368-58AC-7147E2C5406C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66BEC259-4BF8-3368-58AC-7147E2C5406C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAF4164A-BA20-D199-AA69-FB23409CCF91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAF4164A-BA20-D199-AA69-FB23409CCF91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAF4164A-BA20-D199-AA69-FB23409CCF91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAF4164A-BA20-D199-AA69-FB23409CCF91}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
