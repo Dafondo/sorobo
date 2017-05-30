@@ -10,9 +10,11 @@ public class ButtonManager : MonoBehaviour {
 
     public GameObject RobotUI;
 
-    public Transform RobotGrid;
+    //public Transform RobotGrid;
 
-    public Dropdown RobotList;
+    public Dropdown RobotDropdown;
+
+    public RectTransform RobotList;
 
     public string directory = @"Assets\Paths";
 
@@ -25,19 +27,23 @@ public class ButtonManager : MonoBehaviour {
         Debug.Log(directoryPath.GetFiles()[0]);
         foreach(FileInfo file in fileInfo)
         {
-            RobotList.options.Add(new Dropdown.OptionData() { text = Path.GetFileNameWithoutExtension(file.Name) });
+            RobotDropdown.options.Add(new Dropdown.OptionData() { text = Path.GetFileNameWithoutExtension(file.Name) });
         }
-        RobotList.value = 0;
+        RobotDropdown.value = 0;
     }
 
     public void AddBotBtn()
     {
         // string path = EditorUtility.OpenFilePanel("Choose robot path file", "Assets/Paths", "");
-        string path = directory + "\\" + RobotList.options[RobotList.value].text + ".txt";
+        string path = directory + "\\" + RobotDropdown.options[RobotDropdown.value].text + ".txt";
 
         // Instantiates new robot UI element, places it in the RobotGrid, and passes path parameter
+        //GameObject robot = Instantiate(RobotUI);
+        //robot.transform.SetParent(RobotGrid);
+        //robot.GetComponent<RobotUIScript>().SetPath(path);
+
         GameObject robot = Instantiate(RobotUI);
-        robot.transform.SetParent(RobotGrid);
+        robot.transform.SetParent(RobotList);
         robot.GetComponent<RobotUIScript>().SetPath(path);
 
         GameManager.addPath(path);

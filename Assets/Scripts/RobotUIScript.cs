@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class RobotUIScript : MonoBehaviour {
+    public RectTransform RobotList;
     private string path;
     private int index;
-    private int elemPerRow = 5;
+    private int elemPerRow = 1;
     private int xInitial = 80;
     private int yInitial = -80;
     private int xOffset = 150;
@@ -13,12 +14,14 @@ public class RobotUIScript : MonoBehaviour {
 
 	void Start ()
     {
+        RobotList = (RectTransform)transform.parent;
         // Finds index of this UI element within the RobotGrid and places it correctly
         index = transform.parent.transform.childCount - 1;
         int x = xInitial + (index % elemPerRow) * xOffset;
         int y = yInitial - (index / elemPerRow) * yOffset;
         Vector3 pos = new Vector3(x, y, 0);
         transform.localPosition = pos;
+        RobotList.sizeDelta = new Vector2(RobotList.sizeDelta.x, RobotList.sizeDelta.y + yOffset);
     }
 
     // Called when created
