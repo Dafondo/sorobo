@@ -6,8 +6,8 @@ public class RobotUIScript : MonoBehaviour {
     private string path;
     private int index;
     private int elemPerRow = 5;
-    private int xInitial = 50;
-    private int yInitial = -20;
+    private int xInitial = 80;
+    private int yInitial = -80;
     private int xOffset = 150;
     private int yOffset = 150;
 
@@ -15,8 +15,8 @@ public class RobotUIScript : MonoBehaviour {
     {
         // Finds index of this UI element within the RobotGrid and places it correctly
         index = transform.parent.transform.childCount - 1;
-        int x = xInitial + index % elemPerRow * xOffset;
-        int y = yInitial - index / elemPerRow * yOffset;
+        int x = xInitial + (index % elemPerRow) * xOffset;
+        int y = yInitial - (index / elemPerRow) * yOffset;
         Vector3 pos = new Vector3(x, y, 0);
         transform.localPosition = pos;
     }
