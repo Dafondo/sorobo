@@ -18,7 +18,9 @@ public class ButtonManager : MonoBehaviour {
 
     public string directory = @"Assets\Paths";
 
-    DirectoryInfo directoryPath;
+    public DirectoryInfo directoryPath;
+
+    public string[] files;
 
     private void Start()
     {
@@ -38,10 +40,6 @@ public class ButtonManager : MonoBehaviour {
         string path = directory + "\\" + RobotDropdown.options[RobotDropdown.value].text + ".txt";
 
         // Instantiates new robot UI element, places it in the RobotGrid, and passes path parameter
-        //GameObject robot = Instantiate(RobotUI);
-        //robot.transform.SetParent(RobotGrid);
-        //robot.GetComponent<RobotUIScript>().SetPath(path);
-
         GameObject robot = Instantiate(RobotUI);
         robot.transform.SetParent(RobotList);
         robot.GetComponent<RobotUIScript>().SetPath(path);

@@ -26,9 +26,10 @@ public class RobotMovement : MonoBehaviour {
                 if (totalTime >= coord[0])
                 {
                     Vector3 newPos = new Vector3(coord[1], coord[2], coord[3]);
-                    Vector3 newRot = new Vector3(coord[4], coord[5], coord[6]);
+                    Vector3 relativePos = newPos - transform.position;
+                    Quaternion rotation = Quaternion.LookRotation(relativePos);
                     transform.position = newPos;
-                    transform.eulerAngles = newRot;
+                    transform.rotation = rotation;
                     step++;
                     //Debug.Log(transform.position);
                     //Debug.Log(transform.eulerAngles);
@@ -52,9 +53,10 @@ public class RobotMovement : MonoBehaviour {
                 if (frameCounter >= coord[0])
                 {
                     Vector3 newPos = new Vector3(coord[1], coord[2], coord[3]);
-                    Vector3 newRot = new Vector3(coord[4], coord[5], coord[6]);
+                    Vector3 relativePos = newPos - transform.position;
+                    Quaternion rotation = Quaternion.LookRotation(relativePos);
                     transform.position = newPos;
-                    transform.eulerAngles = newRot;
+                    transform.rotation = rotation;
                     step++;
                 }
             }
