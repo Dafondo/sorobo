@@ -42,7 +42,7 @@ public class ButtonManager : MonoBehaviour {
         // Instantiates new robot UI element, places it in the RobotGrid, and passes path parameter
         GameObject robot = Instantiate(RobotUI);
         robot.transform.SetParent(RobotList);
-        robot.GetComponent<RobotUIScript>().SetPath(path);
+        robot.GetComponent<RobotUIScript>().SetPath(path, RobotDropdown.value);
 
         GameManager.addPath(path);
     }
